@@ -1,0 +1,129 @@
+@import url('css2.css');
+
+body {
+	text-align: center;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	overflow: hidden;
+	background-color: #080808;
+	color: #eeeeee;
+}
+
+.title-container {
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 64px;
+	margin: 0px;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 40px;
+	margin-top: 8px;
+}
+
+.download-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.glow-on-hover {
+	width: 380px;
+	height: 50px;
+	border: none;
+	outline: none;
+	background: #202020;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	margin-left: 16px;
+	font-size: 20px;
+	line-height: 50px;
+	user-select: none;
+	margin-bottom: 8px;
+}
+
+.glow-on-hover:before {
+	content: '';
+	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing 20s linear infinite;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+	border-radius: 10px;
+}
+
+.glow-on-hover:active {
+	color: #000
+}
+
+.glow-on-hover:active:after {
+	background: transparent;
+}
+
+.glow-on-hover:hover:before {
+	opacity: 1;
+}
+
+.glow-on-hover:after {
+	z-index: -1;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #111;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+}
+
+@keyframes glowing {
+	0% {
+		background-position: 0 0;
+	}
+
+	50% {
+		background-position: 400% 0;
+	}
+
+	100% {
+		background-position: 0 0;
+	}
+}
+/*
+     FILE ARCHIVED ON 16:14:49 Jul 04, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:16:33 Jun 30, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.788
+  exclusion.robots: 0.105
+  exclusion.robots.policy: 0.094
+  esindex: 0.01
+  cdx.remote: 7.238
+  LoadShardBlock: 269.733 (3)
+  PetaboxLoader3.datanode: 161.516 (4)
+  PetaboxLoader3.resolve: 475.273 (2)
+  load_resource: 444.87
+*/

@@ -1,0 +1,67 @@
+body {
+    background-color: #FFFF;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+list {
+    align-items: center;
+
+    direction: row;
+    gap: 60;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+item {
+    direction: column;
+    gap:10;
+}
+
+introduction {
+    direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #000;
+}
+
+h2 {
+    color: #000;
+}
+
+h3 {
+    color: #000;
+}
+
+h4 {
+    color: #000;
+}
+
+h5 {
+    color: #000;
+}
+
+h6 {
+    color: #000;
+}
+
+p {
+    color: #000;
+}
+
+card {
+    direction: column;
+    padding: 10px;
+    border-radius: 12px;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    gap: 5px;
+}
+
+domain {
+    font-family: Cascadia Code;
+    font-size: 9px;
+}

@@ -1,0 +1,67 @@
+{
+    "android": {
+        "latest": "N/A",
+        "versions": [{
+            "version": "N/A",
+            "changelog": "N/A",
+            "downloads": [{
+                    "version": "Android (arm32 / armhf)",
+                    "links": [{
+                            "title": "Direct",
+                            "url": "https://github.com/SaturnMusic/"
+                        },
+                        {
+                            "title": "Telegram",
+                            "url": "https://t.me/SaturnReleases/"
+                        }
+                    ]
+                },
+                {
+                    "version": "Android (arm64 / aarch64)",
+                    "links": [{
+                            "title": "Direct",
+                            "url": "https://github.com/SaturnMusic/"
+                        },
+                        {
+                            "title": "Telegram",
+                            "url": "https://t.me/SaturnReleases/"
+                        }
+                    ]
+                }
+            ]
+        }]
+    },
+    "pc": {
+        "latest": "N/A",
+        "versions": [{
+            "version": "N/A",
+            "changelog": "N/A",
+            "downloads": [
+                {
+                    "version": "Windows Portable x64",
+                    "links": [{
+                            "title": "Direct",
+                            "url": "https://github.com/SaturnMusic/"
+                        },
+                        {
+                            "title": "Telegram",
+                            "url": "https://t.me/SaturnReleases/"
+                        }
+                    ]
+                },
+                {
+                    "version": "Windows Setup x64",
+                    "links": [{
+                            "title": "Direct",
+                            "url": "https://github.com/SaturnMusic/"
+                        },
+                        {
+                            "title": "Telegram",
+                            "url": "https://t.me/SaturnReleases/"
+                        }
+                    ]
+                }
+            ]
+        }]
+    }
+}
