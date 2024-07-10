@@ -7727,13 +7727,13 @@ self.__WB_pmw || (self.__WB_pmw = function(obj) { return this.__WB_source = obj,
 
         function il(e) { window.location.href = e.links[0].url }
 
-        function rl() { window.location.href = "https://git.freezer.life/exttex" }
+        function rl() { window.location.href = "https://github.com/SaturnMusic" }
 
-        function al() { window.location.href = "https://files.freezer.life" }
+        function al() { window.location.href = "https://t.me/SaturnReleases" }
 
         function ol(e, t, n) {
             var i = null;
-            navigator.platform.includes("Mac") && (window.location.href = "https://pornhub.com/gay"), Js.get("/api/versions", { responseType: "json" }).then((e => { n(0, i = e.data) }));
+            Js.get("/api/versions", { responseType: "json" }).then((e => { n(0, i = e.data) }));
             let r = .01,
                 a = !1;
             return function y(e) {
