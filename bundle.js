@@ -7663,51 +7663,125 @@ self.__WB_pmw || (self.__WB_pmw = function(obj) { return this.__WB_source = obj,
         function $s(e, t, n) { const i = e.slice(); return i[7] = t[n], i }
 
         function Qs(e) {
-            let t, n, i, r, a, p, g, v, y, x, _, b = e[0].android.latest + "",
+            let t, n, i, r, a, p, g, v, y, linuxHeader, linuxVersion, linuxDownloads, b = e[0].android.latest + "",
                 w = e[0].pc.latest + "",
+                L = e[0].linux.latest + "",
                 M = e[0].android.versions[0].downloads,
-                T = [];
-            for (let t = 0; t < M.length; t += 1) T[t] = el($s(e, M, t));
-            let E = e[0].pc.versions[0].downloads,
-                S = [];
-            for (let t = 0; t < E.length; t += 1) S[t] = tl(Ks(e, E, t));
+                T = [],
+                E = e[0].pc.versions[0].downloads,
+                S = [],
+                A = e[0].linux.versions[0].downloads,
+                D = [];
+
+            for (let t = 0; t < M.length; t += 1) {
+                T[t] = el($s(e, M, t));
+            }
+
+            for (let t = 0; t < E.length; t += 1) {
+                S[t] = tl(Ks(e, E, t));
+            }
+
+            for (let t = 0; t < A.length; t += 1) {
+                D[t] = ll(Ks(e, A, t));
+            }
+
             return {
                 c() {
-                    t = u("h3"), n = h("Mobile latest: "), i = h(b), r = d(), a = u("div");
+                    t = document.createElement("h3");
+                    n = document.createTextNode("Mobile latest: ");
+                    i = h(b);
+                    r = document.createElement("div");
+                    r.className = "download-buttons"; // Add class here
                     for (let e = 0; e < T.length; e += 1) T[e].c();
-                    p = d(), g = u("h3"), v = h("PC latest: "), y = h(w), x = d(), _ = u("div");
+                    a = document.createElement("h3");
+                    p = document.createTextNode("PC latest: ");
+                    g = h(w);
+                    v = document.createElement("div");
+                    v.className = "download-buttons"; // Add class here
                     for (let e = 0; e < S.length; e += 1) S[e].c();
-                    f(a, "class", "download-buttons"), f(_, "class", "download-buttons")
+                    y = document.createElement("h3");
+                    linuxHeader = document.createTextNode("Linux latest: ");
+                    linuxVersion = h(L);
+                    linuxDownloads = document.createElement("div");
+                    linuxDownloads.className = "download-buttons"; // Add class here
+                    for (let e = 0; e < D.length; e += 1) D[e].c();
                 },
                 m(e, l) {
-                    s(e, t, l), o(t, n), o(t, i), s(e, r, l), s(e, a, l);
-                    for (let e = 0; e < T.length; e += 1) T[e].m(a, null);
-                    s(e, p, l), s(e, g, l), o(g, v), o(g, y), s(e, x, l), s(e, _, l);
-                    for (let e = 0; e < S.length; e += 1) S[e].m(_, null)
+                    e.insertBefore(t, l);
+                    t.appendChild(n);
+                    t.appendChild(i);
+
+                    e.insertBefore(r, l);
+                    for (let e = 0; e < T.length; e += 1) T[e].m(r, null);
+
+                    e.insertBefore(a, l);
+                    a.appendChild(p);
+                    a.appendChild(g);
+
+                    e.insertBefore(v, l);
+                    for (let e = 0; e < S.length; e += 1) S[e].m(v, null);
+
+                    e.insertBefore(y, l);
+                    y.appendChild(linuxHeader);
+                    y.appendChild(linuxVersion);
+
+                    e.insertBefore(linuxDownloads, l);
+                    for (let e = 0; e < D.length; e += 1) D[e].m(linuxDownloads, null);
                 },
                 p(e, t) {
-                    if (1 & t && b !== (b = e[0].android.latest + "") && m(i, b), 1 & t) {
+                    if (1 & t && b !== (b = e[0].android.latest + "")) {
+                        i.data = b;
+                    }
+                    if (1 & t) {
                         let n;
                         for (M = e[0].android.versions[0].downloads, n = 0; n < M.length; n += 1) {
                             const i = $s(e, M, n);
-                            T[n] ? T[n].p(i, t) : (T[n] = el(i), T[n].c(), T[n].m(a, null))
+                            T[n] ? T[n].p(i, t) : (T[n] = el(i), T[n].c(), T[n].m(r, null));
                         }
                         for (; n < T.length; n += 1) T[n].d(1);
-                        T.length = M.length
+                        T.length = M.length;
                     }
-                    if (1 & t && w !== (w = e[0].pc.latest + "") && m(y, w), 1 & t) {
+                    if (1 & t && w !== (w = e[0].pc.latest + "")) {
+                        g.data = w;
+                    }
+                    if (1 & t) {
                         let n;
                         for (E = e[0].pc.versions[0].downloads, n = 0; n < E.length; n += 1) {
                             const i = Ks(e, E, n);
-                            S[n] ? S[n].p(i, t) : (S[n] = tl(i), S[n].c(), S[n].m(_, null))
+                            S[n] ? S[n].p(i, t) : (S[n] = tl(i), S[n].c(), S[n].m(v, null));
                         }
                         for (; n < S.length; n += 1) S[n].d(1);
-                        S.length = E.length
+                        S.length = E.length;
+                    }
+                    if (1 & t && L !== (L = e[0].linux.latest + "")) {
+                        linuxVersion.data = L;
+                    }
+                    if (1 & t) {
+                        let n;
+                        for (A = e[0].linux.versions[0].downloads, n = 0; n < A.length; n += 1) {
+                            const i = Ks(e, A, n);
+                            D[n] ? D[n].p(i, t) : (D[n] = ll(i), D[n].c(), D[n].m(linuxDownloads, null));
+                        }
+                        for (; n < D.length; n += 1) D[n].d(1);
+                        D.length = A.length;
                     }
                 },
-                d(e) { e && l(t), e && l(r), e && l(a), c(T, e), e && l(p), e && l(g), e && l(x), e && l(_), c(S, e) }
-            }
+                d(e) {
+                    e && t.parentNode.removeChild(t);
+                    e && r.parentNode.removeChild(r);
+                    c(T, e);
+                    e && a.parentNode.removeChild(a);
+                    e && v.parentNode.removeChild(v);
+                    c(S, e);
+                    e && y.parentNode.removeChild(y);
+                    e && linuxDownloads.parentNode.removeChild(linuxDownloads);
+                    c(D, e);
+                }
+            };
         }
+
+
+
 
         function el(e) {
             let t, n, i, r, a, c, d = e[7].version + "";
@@ -7723,13 +7797,45 @@ self.__WB_pmw || (self.__WB_pmw = function(obj) { return this.__WB_source = obj,
             return { c() { t = u("div"), n = h("Download "), i = h(c), f(t, "class", "glow-on-hover") }, m(e, l) { s(e, t, l), o(t, n), o(t, i), r || (a = p(t, "click", d), r = !0) }, p(t, n) { e = t, 1 & n && c !== (c = e[7].version + "") && m(i, c) }, d(e) { e && l(t), r = !1, a() } }
         }
 
+        function ll(e) {
+            let t, n, i, r, a, c, d = e[7].version + "";
+
+            function g() {
+                return e[2](e[7]);
+            }
+            return {
+                c() {
+                    t = document.createElement("div");
+                    n = document.createTextNode("");
+                    i = document.createTextNode(d);
+                    r = document.createTextNode("");
+                    t.className = "glow-on-hover";
+                    t.addEventListener("click", g);
+                },
+                m(e, l) {
+                    e.insertBefore(t, l);
+                    t.appendChild(n);
+                    t.appendChild(i);
+                    t.appendChild(r);
+                },
+                p(t, n) {
+                    e = t, 1 & n && d !== (d = e[7].version + "") && (i.data = d);
+                },
+                d(e) {
+                    e && t.removeEventListener("click", g);
+                    e && t.parentNode.removeChild(t);
+                }
+            };
+        }
+
+
         function nl(t) { let n, r, a, c, h, m, g, v, y, x, _, b, w, M, T, E = t[0] && Qs(t); return { c() { n = u("main"), r = u("div"), a = u("div"), c = d(), h = u("h1"), h.textContent = "saturn", m = d(), g = u("h2"), g.textContent = "freezer back from the dead", v = d(), y = u("div"), x = u("div"), x.textContent = "All Downloads", _ = d(), b = u("div"), b.textContent = "Source Code", w = d(), E && E.c(), f(a, "id", "3dmodel"), f(x, "class", "glow-on-hover"), f(b, "class", "glow-on-hover"), f(y, "class", "download-buttons"), f(r, "class", "title-container") }, m(e, i) { s(e, n, i), o(n, r), o(r, a), o(r, c), o(r, h), o(r, m), o(r, g), o(r, v), o(r, y), o(y, x), o(y, _), o(y, b), o(r, w), E && E.m(r, null), M || (T = [p(a, "click", t[1]), p(x, "click", al), p(b, "click", rl)], M = !0) }, p(e, [t]) { e[0] ? E ? E.p(e, t) : (E = Qs(e), E.c(), E.m(r, null)) : E && (E.d(1), E = null) }, i: e, o: e, d(e) { e && l(n), E && E.d(), M = !1, i(T) } } }
 
         function il(e) { window.location.href = e.links[0].url }
 
-        function rl() { window.location.href = "https://github.com/SaturnMusic" }
+        function rl() { window.location.href = "https://git.freezer.life/exttex" }
 
-        function al() { window.location.href = "https://t.me/SaturnReleases" }
+        function al() { window.location.href = "https://files.freezer.life" }
 
         function ol(e, t, n) {
             var i = null;
