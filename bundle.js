@@ -7833,9 +7833,9 @@ self.__WB_pmw || (self.__WB_pmw = function(obj) { return this.__WB_source = obj,
 
         function il(e) { window.location.href = e.links[0].url }
 
-        function rl() { window.location.href = "https://git.freezer.life/exttex" }
+        function rl() { window.location.href = "https://github.com/SaturnMusic/" }
 
-        function al() { window.location.href = "https://files.freezer.life" }
+        function al() { window.location.href = "https://t.me/SaturnReleases/" }
 
         function ol(e, t, n) {
             var i = null;
