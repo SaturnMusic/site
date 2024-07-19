@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const localFilePath = 'versions.json';
-const webFileUrl = 'https://raw.githubusercontent.com/SluttySpider/revisions/main/versions.json';
+const webFileUrl = 'https://raw.githubusercontent.com/Ascensionist/revisions/main/versions.json';
 const downloadPath = 'versions.json';
 
 function getFileHash(filePath) {
