@@ -7829,7 +7829,76 @@ self.__WB_pmw || (self.__WB_pmw = function(obj) { return this.__WB_source = obj,
         }
 
 
-        function nl(t) { let n, r, a, c, h, m, g, v, y, x, _, b, w, M, T, E = t[0] && Qs(t); return { c() { n = u("main"), r = u("div"), a = u("div"), c = d(), h = u("h1"), h.textContent = "saturn", m = d(), g = u("h2"), g.textContent = "freezer back from the dead", v = d(), y = u("div"), x = u("div"), x.textContent = "All Downloads", _ = d(), b = u("div"), b.textContent = "Source Code", w = d(), E && E.c(), f(a, "id", "3dmodel"), f(x, "class", "glow-on-hover"), f(b, "class", "glow-on-hover"), f(y, "class", "download-buttons"), f(r, "class", "title-container") }, m(e, i) { s(e, n, i), o(n, r), o(r, a), o(r, c), o(r, h), o(r, m), o(r, g), o(r, v), o(r, y), o(y, x), o(y, _), o(y, b), o(r, w), E && E.m(r, null), M || (T = [p(a, "click", t[1]), p(x, "click", al), p(b, "click", rl)], M = !0) }, p(e, [t]) { e[0] ? E ? E.p(e, t) : (E = Qs(e), E.c(), E.m(r, null)) : E && (E.d(1), E = null) }, i: e, o: e, d(e) { e && l(n), E && E.d(), M = !1, i(T) } } }
+        function nl(t) {
+            let n, r, a, c, h, m, g, v, y, x, _, b, w, M, T, E, F, fundButton;
+            E = t[0] && Qs(t);
+            return {
+                c() {
+                    n = u("main"),
+                        r = u("div"),
+                        a = u("div"),
+                        c = d(),
+                        h = u("h1"),
+                        h.textContent = "saturn",
+                        m = d(),
+                        g = u("h2"),
+                        g.textContent = "freezer back from the dead",
+                        v = d(),
+                        y = u("div"),
+                        x = u("div"),
+                        x.textContent = "All Downloads",
+                        _ = d(),
+                        b = u("div"),
+                        b.textContent = "Source Code",
+                        w = d(),
+                        fundButton = u("div"),
+                        fundButton.textContent = "Donate",
+                        E && E.c(),
+                        f(a, "id", "3dmodel"),
+                        f(x, "class", "glow-on-hover"),
+                        f(b, "class", "glow-on-hover"),
+                        f(fundButton, "class", "glow-on-hover"),
+                        f(y, "class", "download-buttons"),
+                        f(r, "class", "title-container")
+                },
+                m(e, i) {
+                    s(e, n, i),
+                        o(n, r),
+                        o(r, a),
+                        o(r, c),
+                        o(r, h),
+                        o(r, m),
+                        o(r, g),
+                        o(r, v),
+                        o(r, y),
+                        o(y, x),
+                        o(y, _),
+                        o(y, b),
+                        o(y, w),
+                        o(y, fundButton),
+                        E && E.m(r, null),
+                        M || (T = [
+                            p(a, "click", t[1]),
+                            p(x, "click", al),
+                            p(b, "click", rl),
+                            p(fundButton, "click", fundHandler)
+                        ], M = !0)
+                },
+                p(e, [t]) {
+                    e[0] ? E ? E.p(e, t) : (E = Qs(e), E.c(), E.m(r, null)) : E && (E.d(1), E = null)
+                },
+                i: e,
+                o: e,
+                d(e) {
+                    e && l(n),
+                        E && E.d(),
+                        M = !1,
+                        i(T)
+                }
+            }
+        }
+        
+        function fundHandler() { window.location.href = "https://fund.saturnclient.dev" }
 
         function il(e) { window.location.href = e.links[0].url }
 
